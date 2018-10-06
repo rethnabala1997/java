@@ -8,7 +8,7 @@ public class Main
         //Scanner class to read value
         Scanner sc=new Scanner(System.in);
          
-        System.out.print("Enter any integer number: ");
+        System.out.print("");
         num=sc.nextInt();
          
         //check condition for +ve, -ve and Zero
