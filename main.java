@@ -1,22 +1,36 @@
+import java.util.*;
 import java.util.Scanner;
+public class Demo {
 
-public class Main
-{
-    public static void main(String args[])
-    {
-        char ch;
-        Scanner scan = new Scanner(System.in);
-		
-        System.out.print(" ");
-        ch = scan.next().charAt(0);
-		
-        if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z'))
+
+    public static void main(String[] args) {
+
+    	int year;
+    	Scanner scan = new Scanner(System.in);
+    	System.out.println("Enter any Year:");
+    	year = scan.nextInt();
+    	scan.close();
+        boolean isLeap = false;
+
+        if(year % 4 == 0)
         {
-            System.out.print(ch + " Alphabet");
+            if( year % 100 == 0)
+            {
+                if ( year % 400 == 0)
+                    isLeap = true;
+                else
+                    isLeap = false;
+            }
+            else
+                isLeap = true;
         }
+        else {
+            isLeap = false;
+        }
+
+        if(isLeap==true)
+            System.out.println(year + " Leap Year.");
         else
-        {
-            System.out.print(ch + " ");
-        }
+            System.out.println(year + "  not  Leap Year.");
     }
 }
