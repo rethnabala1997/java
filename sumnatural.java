@@ -2,14 +2,12 @@ public class SumNatural {
 
     public static void main(String[] args) {
 
-        int num = 3, i = 1, sum = 0;
-
+        int num = 3, i = 1, sum  = 0;
         while(i <= num)
         {
             sum += i;
             i++;
-        }
-
-        System.out.println("Sum = " + sum);
+             }
+             System.out.println("Sum  = " + sum);
     }
-    }
+}
